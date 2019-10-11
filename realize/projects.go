@@ -579,7 +579,7 @@ func (p *Project) run(path string, stream chan Response, stop <-chan bool) (err 
 		// https://github.com/golang/go/issues/5615
 		// https://github.com/golang/go/issues/6720
 		if build != nil {
-			// https://github.com/oxequa/realize/pull/208/commits/6ad5396ed6dab1ace118722418b450120d0b2e4b
+			// https://github.com/oxequa/realize/pull/208
 			if runtime.GOOS == "windows" {
 				build.Process.Kill()
 				build.Process.Wait()
@@ -613,12 +613,14 @@ func (p *Project) run(path string, stream chan Response, stop <-chan bool) (err 
 	if p.Tools.Run.Path != "" {
 		dirPath, _ = filepath.Abs(p.Tools.Run.Path)
 	}
-	name := filepath.Base(path)
-	if path == "." && p.Tools.Run.Path == "" {
-		name = filepath.Base(Wdir())
-	} else if p.Tools.Run.Path != "" {
-		name = filepath.Base(dirPath)
+	listCmd := exec.Command("go", "list")
+
+	listCmdOutput, err := listCmd.Output()
+	if err != nil {
+		return err
 	}
+
+	name := filepath.Base(strings.TrimSpace(string(listCmdOutput)))
 	path = filepath.Join(dirPath, name)
 	if p.Tools.Run.Method != "" {
 		path = p.Tools.Run.Method
