@@ -10,7 +10,7 @@ import (
 
 	"github.com/JamesnaW/realize/realize"
 	"github.com/oxequa/interact"
-	"gopkg.in/urfave/cli.v2"
+	"github.com/urfave/cli/v2"
 )
 
 var r realize.Realize
