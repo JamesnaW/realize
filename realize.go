@@ -787,9 +787,8 @@ func setup(c *cli.Context) (err error) {
 							Resolve: func(d interact.Context) bool {
 								val, _ := d.Ans().Bool()
 								if val {
-									// TODO
 
-									// r.Schema.Projects[len(r.Schema.Projects)-1].Watcher.Ignore = r.Schema.Projects[len(r.Schema.Projects)-1].Watcher.Ignore[:len(r.Schema.Projects[len(r.Schema.Projects)-1].Watcher.Ignore)-1]
+									r.Schema.Projects[len(r.Schema.Projects)-1].Watcher.Ignore = r.Schema.Projects[len(r.Schema.Projects)-1].Watcher.Ignore[:len(r.Schema.Projects[len(r.Schema.Projects)-1].Watcher.Ignore)-1]
 								}
 								return val
 							},
@@ -805,13 +804,12 @@ func setup(c *cli.Context) (err error) {
 									Msg:     "Insert a path to ignore (insert '!' to stop)",
 								},
 								Action: func(d interact.Context) interface{} {
-									// TODO
 
-									// val, err := d.Ans().String()
-									// if err != nil {
-									// 	return d.Err()
-									// }
-									// r.Schema.Projects[len(r.Schema.Projects)-1].Watcher.Ignore = append(r.Schema.Projects[len(r.Schema.Projects)-1].Watcher.Ignore, val)
+									val, err := d.Ans().String()
+									if err != nil {
+										return d.Err()
+									}
+									r.Schema.Projects[len(r.Schema.Projects)-1].Watcher.Ignore = append(r.Schema.Projects[len(r.Schema.Projects)-1].Watcher.Ignore, val)
 									d.Reload()
 									return nil
 								},
