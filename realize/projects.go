@@ -579,7 +579,7 @@ func (p *Project) run(path string, stream chan Response, stop <-chan bool) (err 
 		// https://github.com/golang/go/issues/5615
 		// https://github.com/golang/go/issues/6720
 		if build != nil {
-			// https://github.com/oxequa/realize/pull/208
+			// https://github.com/JamesnaW/realize/pull/208
 			if runtime.GOOS == "windows" {
 				build.Process.Kill()
 				build.Process.Wait()

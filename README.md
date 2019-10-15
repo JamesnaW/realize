@@ -3,8 +3,8 @@
 </p>
 <p align="center">
   <a href="https://travis-ci.org/oxequa/realize"><img src="https://img.shields.io/travis/oxequa/realize.svg?style=flat-square" alt="Build status"></a>
-  <a href="https://goreportcard.com/report/github.com/oxequa/realize"><img src="https://goreportcard.com/badge/github.com/oxequa/realize?style=flat-square" alt="GoReport"></a>
-  <a href="http://godoc.org/github.com/oxequa/realize"><img src="http://img.shields.io/badge/go-documentation-blue.svg?style=flat-square" alt="GoDoc"></a>
+  <a href="https://goreportcard.com/report/github.com/JamesnaW/realize"><img src="https://goreportcard.com/badge/github.com/JamesnaW/realize?style=flat-square" alt="GoReport"></a>
+  <a href="http://godoc.org/github.com/JamesnaW/realize"><img src="http://img.shields.io/badge/go-documentation-blue.svg?style=flat-square" alt="GoDoc"></a>
   <a href="https://raw.githubusercontent.com/oxequa/realize/master/LICENSE"><img src="https://img.shields.io/aur/license/yaourt.svg?style=flat-square" alt="License"></a>
   <a href="https://gitter.im/oxequa/realize?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge"><img src="https://img.shields.io/gitter/room/oxequa/realize.svg?style=flat-square" alt="Gitter"></a>
 </p>
@@ -38,7 +38,7 @@
 - Export logs and errors to an external file.
 - Step-by-step project initialization.
 - Redesigned panel that displays build errors, console outputs and warnings.
-- Any suggestion? [Suggest an amazing feature! 🕺🏻](https://github.com/oxequa/realize/issues/new)
+- Any suggestion? [Suggest an amazing feature! 🕺🏻](https://github.com/JamesnaW/realize/issues/new)
 
 ## Supporters
 <p align="center"><br>
@@ -47,7 +47,7 @@
 
 ## Quickstart
 ```
-go get github.com/oxequa/realize
+go get github.com/JamesnaW/realize
 ```
 
 ## Commands List
@@ -82,7 +82,7 @@ Some examples:
     $ realize start --name="realize" --build
     $ realize start --path="realize" --run --no-config
     $ realize start --install --test --fmt --no-config
-    $ realize start --path="/Users/username/go/src/github.com/oxequa/realize-examples/coin/"
+    $ realize start --path="/Users/username/go/src/github.com/JamesnaW/realize-examples/coin/"
 
 If you want, you can specify additional arguments for your project:
 
@@ -121,7 +121,7 @@ Remove a project by its name
 
 *** there is no more a .realize dir, but only a .realize.yaml file ***
 
-For more examples check: [Realize Examples](https://github.com/oxequa/realize-examples)
+For more examples check: [Realize Examples](https://github.com/JamesnaW/realize-examples)
 
     settings:
         legacy:
@@ -193,7 +193,7 @@ For more examples check: [Realize Examples](https://github.com/oxequa/realize-ex
 
 ## Support and Suggestions
 💬 Chat with us [Gitter](https://gitter.im/oxequa/realize)<br>
-⭐️ Suggest a new [Feature](https://github.com/oxequa/realize/issues/new)
+⭐️ Suggest a new [Feature](https://github.com/JamesnaW/realize/issues/new)
 
 ## Backers
 

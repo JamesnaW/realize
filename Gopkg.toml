@@ -50,7 +50,7 @@
 
 [[constraint]]
   branch = "v2"
-  name = "gopkg.in/urfave/cli.v2"
+  name = "github.com/urfave/cli"
 
 [[constraint]]
   name = "gopkg.in/yaml.v2"
