@@ -614,14 +614,14 @@ func (p *Project) run(path string, stream chan Response, stop <-chan bool) (err 
 		dirPath, _ = filepath.Abs(p.Tools.Run.Path)
 	}
 	// https://github.com/oxequa/realize/pull/218
-	listCmd := exec.Command("go", "list")
 
-	listCmdOutput, err := listCmd.Output()
-	if err != nil {
-		return err
+	name := filepath.Base(path)
+	if path == "." && p.Tools.Run.Path == "" {
+		name = filepath.Base(Wdir())
+	} else if p.Tools.Run.Path != "" {
+		name = filepath.Base(dirPath)
 	}
 
-	name := filepath.Base(strings.TrimSpace(string(listCmdOutput)))
 	path = filepath.Join(dirPath, name)
 	if p.Tools.Run.Method != "" {
 		path = p.Tools.Run.Method
